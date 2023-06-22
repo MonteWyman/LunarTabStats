@@ -1,7 +1,8 @@
 {
   "compatibilityLevel": "JAVA_8",
-  "package": "com.example.mod.mixins",
+  "package": "dev.rgbmc.tabstats.mixins",
   "mixins": [
+    "GuiPlayerTabOverlayMixin",
     "MinecraftMixin"
   ]
 }

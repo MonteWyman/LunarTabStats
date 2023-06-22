@@ -1,11 +1,9 @@
 {
   "mixinConfigs": [
-    "examplemod.mixins.json"
+    "tabstats.mixins.json"
   ],
   "entrypoints": [
-    "com.example.mod.ExampleMod"
+    "dev.rgbmc.tabstats.TabStats"
   ],
-  "hooks": [
-    "com.example.mod.hook.MinecraftHook"
-  ]
+  "hooks": []
 }
