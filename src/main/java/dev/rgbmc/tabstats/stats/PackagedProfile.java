@@ -1,14 +1,18 @@
 package dev.rgbmc.tabstats.stats;
 
-import com.mojang.authlib.GameProfile;
+import net.minecraft.entity.player.EntityPlayer;
+
+import java.util.UUID;
 
 public class PackagedProfile {
-    private final GameProfile gameProfile;
+    private final String name;
+    private final UUID uuid;
     private HyProfile profile = null;
     private boolean nicked = false;
 
-    public PackagedProfile(GameProfile gameProfile) {
-        this.gameProfile = gameProfile;
+    public PackagedProfile(EntityPlayer entityPlayer) {
+        this.name = entityPlayer.getName();
+        this.uuid = entityPlayer.getUniqueID();
     }
 
     public HyProfile getProfile() {
@@ -27,7 +31,11 @@ public class PackagedProfile {
         this.nicked = nicked;
     }
 
-    public GameProfile getGameProfile() {
-        return gameProfile;
+    public String getName() {
+        return name;
+    }
+
+    public UUID getUuid() {
+        return uuid;
     }
 }

@@ -1,6 +1,6 @@
 plugins {
     java
-    id("com.github.weave-mc.weave-gradle") version "649dba7468"
+    id("com.github.weave-mc.weave-gradle") version "fac948db7f"
 }
 
 group = "dev.rgbmc"
@@ -14,7 +14,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly("com.github.weave-mc:weave-loader:70bd82faa6")
+    compileOnly("com.github.weave-mc:weave-loader:dddf42c53e")
 
     compileOnly("org.spongepowered:mixin:0.8.5")
 }

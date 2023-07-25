@@ -2,12 +2,10 @@ package dev.rgbmc.tabstats.stats;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import com.mojang.authlib.GameProfile;
 import dev.rgbmc.tabstats.TabStats;
 
 public class HyProfile {
     private final long[] EASY_LEVELS_XP = {500, 1000, 2000, 3500};
-    private final GameProfile gameProfile;
     private String rank;
     private String language = "ENGLISH";
     private String bw_final_killed = "无";
@@ -42,8 +40,7 @@ public class HyProfile {
     private long gifted_rank = 0;
     private long karma = 0;
 
-    public HyProfile(String uuid, GameProfile gameProfile) throws Exception {
-        this.gameProfile = gameProfile;
+    public HyProfile(String uuid) throws Exception {
         JsonObject jo = new JsonParser().parse(HyUtils.request("https://api.hypixel.net/player?key=" + TabStats.API_KEY + "&uuid=" + uuid)).getAsJsonObject();
         if (!jo.has("player")) return;
         JsonObject pjo = jo.get("player").getAsJsonObject();
@@ -314,9 +311,5 @@ public class HyProfile {
 
     public String getPlusColor() {
         return plusColor;
-    }
-
-    public GameProfile getGameProfile() {
-        return gameProfile;
     }
 }
