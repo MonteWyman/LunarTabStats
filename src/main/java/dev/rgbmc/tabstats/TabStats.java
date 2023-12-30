@@ -9,7 +9,7 @@ import java.net.*;
 import java.util.List;
 
 public class TabStats implements ModInitializer {
-    public static String API_KEY = System.getProperty("tabstats.apikey");
+    public static String API_KEY = "7a33d22f-2b5c-47ba-a7d0-79799bcc6ae1" // Integrated API-Key
     public static Proxy proxy = Proxy.NO_PROXY;
 
     @Override
